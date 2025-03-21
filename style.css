@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url('img/background.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+}
+/****************************** CABEÇALHO ******************************/
+
+header{
+    background-color: #063e5d;
+    color: white;
+    position: relative;
+    margin: 0;
+}
+
+header  a{
+    color: rgb(255, 255, 255); /* cor dourada */
+    font-weight: bold;
+    text-decoration: none; /* remove o sublinhado */
+    font-size: 20px;
+    text-shadow: 0 0 5px white, 0 0 20px white, 0 0 30px white, 0 0 40px white; /* efeito de brilho */
+}
+header > a:hover {
+    color: white; /* cor dourada mais escura ao passar o mouse */
+    text-shadow: 0 0 15px white, 0 0 25px white, 0 0 35px white, 0 0 50px white; /* brilho mais forte no hover */
+  }
+
+/**********Barra de pesquisa**********/
+.barradepesquisa {
+    margin-top: 0.8em;
+    width: 100%;
+}
+
+.barradepesquisa input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.barradepesquisa button {
+    padding: 10px 15px;
+    background-color: #0c5f7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.barradepesquisa button:hover {
+    background-color: #0a4f63;
+}
+/**********Barra de pesquisa**********/
+
+/****************************** CABEÇALHO ******************************/
+
+/****************************** CONTEÚDO ******************************/
+
+/********** Carrosel *********/
+
+.row{
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/********** Carrosel *********/
+@media (max-width: 800px) {
+    body{
+        overflow-x: hidden; 
+    }
+
+    /* HEADER */
+    header .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        flex-direction: column;
+        text-align: center; 
+    }
+    /* HEADER */
+
+    /* MAIN */
+    
+    /* Carrosel */
+    .row{
+        padding-top: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .carousel-item,  img {
+        height: 200px; /* Ajusta para preencher o espaço */
+    }
+    /* Carrosel */
+
+    /* Perfume INDEX */
+    .perfume{
+        margin-bottom: 20px;
+    }
+    /* Perfume INDEX */
+
+    /* MAIN 2 */
+    .fundoImagem img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .fundoImagem{
+        margin-bottom: 70px;
+    }
+
+    .fundoInfo{
+        width: 100%;
+    }
+
+
+    /* MAIN 2 */
+
+    /* FOOTER */
+
+    .quemSomos a, .atendimento a {
+        padding: 0;
+        font-size: 30px; 
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+
+}
+/**********Produtos**********/
+
+.perfumes{
+    gap: 30px;
+}
+.perfume {
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 200px;
+}
+.perfume:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+
+}
+
+.perfume > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+
+.perfume h3 {
+    margin: 10px ;
+    color: #333;
+    font-family: fantasy;
+}
+
+.perfume p {
+    color: #000000;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.perfume button {
+    background-color: #063e5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.perfume button:hover {
+    background-color: #05334b;
+}
+
+.linkproximapagina{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/**********Produtos**********/
+
+/****************************** CONTEÚDO ******************************/
+
+/****************************** CONTEÚDO 2 ******************************/
+
+.tituloProduto{
+    font-size: 30px;
+}
+
+
+.fundoImagem> img{
+    background-color: white;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 600px;
+    height: 600px
+}
+
+.fundoInfo{
+    background-color: white;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    height: 100%
+}
+
+.comprarbotao {
+    background-color: #063e5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    height: 15%;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #05334b;
+}
+
+.botaoFrete {
+    background-color: #05334b;
+    color: white;
+    border: none;
+    width: 18%;
+    height: 6%;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* img{
+    height: 400px;
+} */
+
+
+
+
+/****************************** RODAPÉ ******************************/
+
+footer {
+    background-color: #063e5d;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.Atendimento,.quemsomos{
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: none;
+}
+footer p {
+    color: white;
+}
+footer h1{
+    color: white;
+}
+footer > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.contato> a {
+    color: white;
+}
+ a:hover {
+   text-decoration: underline;
+}

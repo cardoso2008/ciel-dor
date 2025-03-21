@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciel d'Or - Carolina Herrera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!------------------------------ CABEÇALHO ------------------------------>
+<header>
+    <div class="container">
+        <div class="row">
+    <!-- LOGO -->
+            <div class="col-lg-3 logo col-12 logo">
+                <a href="index.html"><h1>Ciel d'Or</h1></a>
+            </div>
+    <!-- LOGO -->  
+
+    <!-- BARRA DE PESQUISA -->
+            <div class="col-lg-9 barra col-12 barra">
+                <div class="barradepesquisa">
+                    <input type="text" placeholder="Pesquisar perfumes...">
+                    <button style="margin-top: 10px;">Pesquisar</button>
+                </div>
+            </div>
+    <!-- BARRA DE PESQUISA -->
+
+    <!-- CARRINHO -->
+            <!-- <div class="col-lg-3 carrinho col-1 carrinho" style="border: 3px solid green;">
+                <h1>Carrinho</h1>
+            </div> -->
+        </div><br><br>
+    <!-- CARRINHO -->
+
+    <!-- RESOLVER: O 'carrinho' está ficando depois da barra, na versão mobile, devido que sua DIV foi colocada depois, porém quando se coloca antes, na versão desktop, ela fica no meio e não no canto -->
+</header>
+
+<main>
+    <div class="row">
+        <div class="col-lg-6 imgProduto col-12 imgProduto">
+            <div class="fundoImagem">
+                <img src="img/Carolina Herrera F.webp" alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+            <div class="fundoInfo">
+                <h2 class="tituloProduto">CH Carolina Herrera - Perfume Feminino - Eau de Toilette 100ml</h2><br><br>
+                <h3 class="dados1" id="valorDolar" style="display: none;"></h3>
+                <h3 id="valorProduto2"></h3>
+                <h3 id="valorEmRealProduto2"></h3><br><br>
+                <button class="comprarbotao" onclick="apertar()">COMPRAR</button><br><br>
+                <input type="text" placeholder="CEP" id="cep">
+                <button class="botaoFrete" type="submit" onclick="calcularFrete()">Calcular</button><br><br>
+                <h3 id="valorDoFrete"></h3>
+                <h3 id="valorFinalProduto2"></h3><br>
+
+             </div>
+        </div>
+    </div><br><br><br>
+</main>
+<!------------------------------ RODAPÉ ------------------------------>
+<footer>
+    <div class="row">
+
+        <!-- LOGO -->
+        <div class="col-lg-4 logoRodape col-12 logoRodape">
+            <h1><a style="text-decoration: none; color: white;" href="#">Ciel d'Or</a></h1>
+        </div>
+        <!-- LOGO -->
+
+        <!-- QUEM SOMOS -->
+        <div class="col-lg-4 quemSomos col-6 quemSomos">
+            <a href="#" class="quemsomos">Quem Somos?</a>
+        </div>
+        <!-- QUEM SOMOS -->
+
+        <!-- ATENDIMENTO -->
+        <div class="col-lg-4 atendimento col-6 atendimento" >
+            <a class="Atendimento" href="mailto:ajuda@cieldor.com">Atendimento</a>
+        </div>
+        <!-- ATENDIMENTO -->
+    </div><br>
+
+    <div class="row">
+
+        <!-- LOGO REDE SOCIAL 1 -->
+        <div class="col-lg-1 logo col-3 logo" >
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" width="50" height="50"></a>
+        </div>
+        <!-- LOGO REDE SOCIAL 1 -->
+
+        <!-- LOGO REDE SOCIAL 2 -->
+        <div class="col-lg-1 logo col-3 logo" >
+            <a href="https://www.tiktok.com/login?lang=pt-BR&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dpt-BR" target="_blank"><img src="img/tiktok.webp" width="50" height="50"></a>
+        </div>
+        <!-- LOGO REDE SOCIAL 2 -->
+
+        <!-- LOGO REDE SOCIAL 3 -->
+        <div class="col-lg-1 logo col-3 logo">
+            <a href="https://x.com/i/flow/login" target="_blank"><img src="img/twitter.webp" width="50" height="50"></a>
+        </div>
+        <!-- LOGO REDE SOCIAL 3 -->
+
+        <!-- LOGO REDE SOCIAL 4 -->
+        <div class="col-lg-1 logo col-3 logo" >
+            <a href="https://www.whatsapp.com/?lang=pt_BR" target="_blank"><img src="img/whatsapp.png" width="50" height="50"></a>
+        </div>
+        <!-- LOGO REDE SOCIAL 4 -->
+
+        <!-- INFORMAÇÕES GERAIS -->
+        <div class="col-lg-8 informacoes col-12 informacoes">
+            <p>Endereço: Av. Juscelino Kubitschek, 2041, Torre E, 18º andar - São Paulo, CEP: 04543-011</p>
+            <p class="contato">Contato: <a href="mailto:ajuda@cieldor.com">ajuda@cieldor.com</a></p>
+            <p>Formas de pagamento aceitas: Cartões de crédito (Visa, MasterCard, Elo e American Express), débito e Pix.</p>
+        </div>
+        <!-- INFORMAÇÕES GERAIS -->
+    </div>
+</footer>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Valor Dólar -->
+<label class="subtitulo1" for="" style="display: none;">VALOR DO DÓLAR</label>
+
+<!-- Produto 1 -->
+<p id="nomeProduto1" style="display: none;"></p>
+<p id="valorProduto1" style="display: none;"></p>
+<p id="valorEmRealProduto1" style="display: none;"></p>
+<p id="valorFinalProduto1" style="display: none;"></p>
+<!-- Produto 1 -->
+
+<!-- Produto 2 -->
+<p id="nomeProduto2" style="display: none;"></p>
+
+<!-- Produto 2 -->
+
+<!-- Produto 3 -->
+<p id="nomeProduto3" style="display: none;"></p>
+<p id="valorProduto3" style="display: none;"></p>
+<p id="valorEmRealProduto3" style="display: none;"></p>
+<p id="valorFinalProduto3" style="display: none;"></p>
+<!-- Produto 3 -->
+
+<!-- Produto 4 -->
+<p id="nomeProduto4" style="display: none;"></p>
+<p id="valorProduto4" style="display: none;"></p>
+<p id="valorEmRealProduto4" style="display: none;"></p>
+<p id="valorFinalProduto4" style="display: none;"></p>
+<!-- Produto 4 -->
+
+<!-- Produto 5 -->
+<p id="nomeProduto5" style="display: none;"></p>
+<p id="valorProduto5" style="display: none;"></p>
+<p id="valorEmRealProduto5" style="display: none;"></p>
+<p id="valorFinalProduto5" style="display: none;"></p>
+<!-- Produto 5 -->
+
+<!-- Produto 6 -->
+<p id="nomeProduto6" style="display: none;"></p>
+<p id="valorProduto6" style="display: none;"></p>
+<p id="valorEmRealProduto6" style="display: none;"></p>
+<p id="valorFinalProduto6" style="display: none;"></p>
+<!-- Produto 6 -->
+
+<!-- CEP -->
+<input type="text" placeholder="CEP" id="cep" style="display: none;">
+<input type="text" placeholder="Cidade" id="cidade" style="display: none;">
+<input type="text" placeholder="UF" readonly id="estado" style="display: none;">
+<!-- CEP -->
+
+    <script src="script.js"></script>
+</body>
+</html>
+
